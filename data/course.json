@@ -1,0 +1,101 @@
+{
+  "portal": {
+    "name": "LLM Playground",
+    "organisation": "edcosys",
+    "programme": "Flagship AI Course"
+  },
+  "roles": [
+    {
+      "id": "student",
+      "label": "Student",
+      "hint": "Secondary school or university"
+    },
+    {
+      "id": "professional",
+      "label": "Working professional",
+      "hint": "Office, business or corporate role"
+    }
+  ],
+  "lessons": [
+    {
+      "id": "1.1",
+      "level": 1,
+      "levelName": "Foundations",
+      "title": "LLMs: What AI Actually Is",
+      "summary": "Five short stations show how Gemini and ChatGPT read your words, guess the next one, forget things and sometimes make things up. Then crack a real AI case with your group and finish with a 10-question quiz.",
+      "stations": [
+        {
+          "id": "tokens",
+          "order": 1,
+          "kind": "station",
+          "title": "Token Counter",
+          "minutes": 4,
+          "status": "live",
+          "summary": "See how AI chops your words into tokens, in English and Chinese.",
+          "page": "station-tokens.html"
+        },
+        {
+          "id": "next-word",
+          "order": 2,
+          "kind": "station",
+          "title": "Next-Word Predictor",
+          "minutes": 4,
+          "status": "live",
+          "summary": "Guess the next word, then see what the model would pick and why.",
+          "page": "station-next-word.html"
+        },
+        {
+          "id": "memory",
+          "order": 3,
+          "kind": "station",
+          "title": "Memory Bucket",
+          "minutes": 3,
+          "status": "live",
+          "summary": "Watch a chat fill up until the AI forgets your first message.",
+          "page": "station-memory.html"
+        },
+        {
+          "id": "training",
+          "order": 4,
+          "kind": "station",
+          "title": "Training & Model Size",
+          "minutes": 3,
+          "status": "live",
+          "summary": "How much does an AI read before it can chat? More than you think.",
+          "page": "station-training.html"
+        },
+        {
+          "id": "real-or-fake",
+          "order": 5,
+          "kind": "station",
+          "title": "Real or Made Up?",
+          "minutes": 3,
+          "status": "live",
+          "summary": "Spot the hallucination before it fools you.",
+          "page": "station-real-or-fake.html"
+        },
+        {
+          "id": "case-detective",
+          "order": 6,
+          "kind": "activity",
+          "title": "AI Case Detective",
+          "minutes": 18,
+          "status": "live",
+          "page": "case-detective.html",
+          "summary": "Group mission: crack a real case where AI went wrong, name the cause and give one rule to stop it."
+        },
+        {
+          "id": "quiz",
+          "order": 7,
+          "kind": "quiz",
+          "title": "LLM Quiz",
+          "minutes": 7,
+          "status": "live",
+          "questions": 10,
+          "summary": "10 questions. See your score and every answer explained.",
+          "page": "quiz.html"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Station 1 · Token Counter · edcosys Learning Portal</title>
+  <link rel="icon" type="image/png" href="assets/img/edcosys-mark.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700;800&family=Noto+Sans+TC:wght@400;500;700;800&display=swap">
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/portal.css">
+  <link rel="stylesheet" href="assets/css/pages.css">
+  <script src="assets/js/store.js"></script>
+  <script>if (!Store.currentUser()) location.replace("index.html#start");</script>
+</head>
+<body>
+  <nav class="nav" aria-label="Main">
+    <div class="container nav-row">
+      <a href="index.html" class="nav-brand"><img src="assets/img/edcosys-portal-logo.png" alt="edcosys portal" width="248" height="30"></a>
+      <ul class="nav-links">
+        <li><a href="index.html#courses">Courses</a></li>
+        <li><a href="lesson-1-1.html">Lesson 1.1</a></li>
+      </ul>
+      <span class="nav-user" id="navUser"></span>
+    </div>
+  </nav>
+
+  <header class="page-head">
+    <div class="container">
+      <p class="crumbs"><a href="index.html">Learning Portal</a> › <a href="lesson-1-1.html">Lesson 1.1</a> › Station 1</p>
+      <p class="kicker">Station 1 · 4 minutes</p>
+      <h1>Token Counter</h1>
+      <p class="lead">AI does not read whole words like we do. It cuts text into small chunks called <b>tokens</b>, then turns each one into numbers. Type anything below and watch how it gets cut up.</p>
+    </div>
+  </header>
+
+  <main class="station-body">
+    <div class="container station-grid">
+      <div>
+        <section class="panel-box" aria-labelledby="tryTitle">
+          <h2 id="tryTitle">Type or paste some text</h2>
+          <p class="sub">Each coloured block is one token. A small number means one character was split across several tokens.</p>
+          <label for="text" class="sr-only" style="position:absolute;left:-9999px">Text to split into tokens</label>
+          <textarea id="text" class="input" placeholder="Try your name, a sentence, or a long word…"></textarea>
+          <div class="presets" id="presets"></div>
+
+          <div class="counts" aria-live="polite">
+            <div><b id="nTokens">0</b><span>Tokens</span></div>
+            <div><b id="nWords">0</b><span>Words</span></div>
+            <div><b id="nChars">0</b><span>Characters</span></div>
+          </div>
+          <div class="tokens" id="tokens"><span class="empty">Your tokens will appear here.</span></div>
+          <p class="fine" id="loading">Loading the tokenizer…</p>
+          <p class="fine">Counts use the tokenizer from OpenAI’s GPT-4o. Gemini uses its own tokenizer, so its numbers are a little different, but the idea is the same.</p>
+        </section>
+
+        <section class="panel-box" aria-labelledby="cmpTitle">
+          <h2 id="cmpTitle">English vs Chinese</h2>
+          <p class="sub">Type the same sentence in both languages (or tap the matching examples). Which one uses more tokens?</p>
+          <div class="counts" style="margin:0">
+            <div><b id="cmpEn">–</b><span>Last English</span></div>
+            <div><b id="cmpZh">–</b><span>Last Chinese</span></div>
+            <div><b id="cmpDiff">–</b><span>Difference</span></div>
+          </div>
+        </section>
+
+        <nav class="next-nav" aria-label="Station navigation">
+          <a href="lesson-1-1.html">← Back to Lesson 1.1</a>
+          <a href="station-next-word.html">Next: Next-Word Predictor →</a>
+        </nav>
+      </div>
+
+      <aside>
+        <section class="panel-box" aria-labelledby="tasksTitle">
+          <h2 id="tasksTitle">Your challenges</h2>
+          <p class="sub">They tick themselves as you go.</p>
+          <ul class="tasks">
+            <li class="task" id="task1"><span class="tick">✓</span><div><b>Find a word that is 1 token</b><span>Type one common English word on its own.</span></div></li>
+            <li class="task" id="task2"><span class="tick">✓</span><div><b>Find a word that needs 4 or more tokens</b><span>Long, rare or made-up words work best.</span></div></li>
+            <li class="task" id="task3"><span class="tick">✓</span><div><b>Compare English and Chinese</b><span>Try one English sentence and one Chinese sentence.</span></div></li>
+          </ul>
+          <div class="complete">
+            <button class="btn btn-navy" id="completeBtn" disabled>Mark station complete</button>
+            <p class="done-msg" id="doneMsg" hidden>✓ Station complete. Saved to your progress.</p>
+          </div>
+        </section>
+
+        <section class="learn" style="margin-top:24px" aria-labelledby="learnTitle">
+          <h2 id="learnTitle">What this means for you</h2>
+          <ul>
+            <li>Long or unusual words become several tokens.</li>
+            <li>Chinese often needs more tokens than English for the same meaning.</li>
+            <li>AI tools have a token limit per chat, so very long text may not fit.</li>
+            <li>Many paid AI tools charge by the token.</li>
+          </ul>
+        </section>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-row">
+      <img src="assets/img/edcosys-portal-logo.png" alt="edcosys portal" width="182" height="22">
+      <span>© <span id="year"></span> edcosys · Your name and progress are saved in this browser only. · <a href="https://www.edcosys.com" target="_blank" rel="noopener">Visit edcosys.com</a></span>
+    </div>
+  </footer>
+
+  <script src="assets/vendor/gpt-tokenizer-2.9.0/o200k_base.js" defer></script>
+  <script src="assets/js/station-tokens.js" defer></script>
+  <script src="assets/js/logout.js" defer></script>
+</body>
+</html>

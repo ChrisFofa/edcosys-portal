@@ -1,0 +1,39 @@
+/* edcosys brand values for the LLM Playground.
+   Source: Flagship golden template deck (1.1-1.2 LLMs & Prompting) + edcosys logo.
+   Change colours here only; every page reads these tokens. */
+:root {
+  /* brand */
+  --edc-logo-blue: #016BFF;   /* exact colour of the edcosys logo */
+  --edc-navy: #004B87;        /* deck titles, headers, primary surfaces */
+  --edc-navy-deep: #003766;
+  --edc-ink: #18212B;         /* body text */
+  --edc-gold: #F2A900;        /* accent: eyebrows, buttons, highlights */
+  --edc-cream: #FFF4D3;       /* warm card fill */
+  --edc-sky: #EAF4F9;         /* cool card fill */
+  --edc-line: #C7E1EF;        /* borders, dividers */
+
+  /* surfaces + text */
+  --bg: #F5F9FC;
+  --surface: #FFFFFF;
+  --text: var(--edc-ink);
+  --text-muted: #536576;
+  --on-navy: #FFFFFF;
+
+  /* states */
+  --ok: #1F7A4D;      --ok-bg: #E3F4EA;
+  --warn-bg: var(--edc-cream);
+  --error: #B3261E;
+
+  /* type */
+  --font: "Noto Sans", "Noto Sans TC", "Helvetica Neue", Arial, sans-serif;
+  --fs-xs: 12px; --fs-sm: 14px; --fs-md: 16px; --fs-lg: 18px; --fs-xl: 22px;
+  --fs-hero: clamp(30px, 4.4vw, 46px);
+
+  /* shape + space */
+  --radius-sm: 10px; --radius: 14px; --radius-lg: 18px;
+  --gap: 16px; --gap-lg: 28px;
+  --shadow-hover: 0 10px 24px -14px rgba(0, 55, 102, .45);
+}
+
+/* One look only: the PPT golden template. No dark theme. */
+:root { color-scheme: light; }
